@@ -93,3 +93,50 @@
   background-position: center;
   position: relative;
 }
+
+/* Like button animation */
+.like-button {
+  transition: transform 0.15s ease;
+}
+
+.like-button.liked {
+  animation: pulse 0.5s;
+}
+
+.like-button:active {
+  transform: scale(1.1);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Food item hover effects */
+.food-item {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.food-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Category badge styles */
+.category-tag {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  background-color: #f3f4f6;
+  color: #4b5563;
+  margin-right: 0.25rem;
+  margin-bottom: 0.25rem;
+}
